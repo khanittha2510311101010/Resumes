@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khanittha Khonlor — Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #FFFFFF;
+    --blush: #FDF3F6;
+    --pink-soft: #F5D8E2;
+    --pink-line: #E7B8CB;
+    --rose-deep: #C87F9C;
+    --ink: #3A3436;
+    --ink-soft: #7A7075;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { -webkit-font-smoothing: antialiased; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  a { color: var(--rose-deep); }
+
+  .page {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 64px 32px 80px;
+  }
+
+  /* ---------- Header ---------- */
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: end;
+    gap: 24px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid var(--pink-line);
+    margin-bottom: 48px;
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+
+  .role-line {
+    margin-top: 8px;
+    font-size: 1.05rem;
+    color: var(--rose-deep);
+    font-weight: 400;
+  }
+
+  .contact {
+    text-align: right;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    line-height: 1.9;
+  }
+
+  /* ---------- Layout ---------- */
+  .layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 56px;
+  }
+
+  @media (max-width: 680px) {
+    .layout { grid-template-columns: 1fr; }
+    header { grid-template-columns: 1fr; text-align: left; }
+    .contact { text-align: left; }
+  }
+
+  .sidebar section + section {
+    margin-top: 40px;
+  }
+
+  .main section + section {
+    margin-top: 44px;
+  }
+
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--rose-deep);
+    margin-bottom: 16px;
+    position: relative;
+    padding-left: 14px;
+  }
+
+  h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.2em;
+    width: 4px;
+    height: 0.9em;
+    background: var(--pink-soft);
+    border-radius: 2px;
+  }
+
+  /* ---------- Sidebar content ---------- */
+  .sidebar p, .sidebar li {
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+
+  .edu-school {
+    font-weight: 500;
+    color: var(--ink);
+    font-size: 0.95rem;
+  }
+
+  .edu-field {
+    margin-top: 2px;
+  }
+
+  .interest-list {
+    list-style: none;
+  }
+
+  .interest-list li {
+    padding-left: 16px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .interest-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--pink-soft);
+  }
+
+  /* ---------- Main content ---------- */
+  .profile-statement {
+    font-size: 1.02rem;
+    color: var(--ink);
+    max-width: 62ch;
+  }
+
+  .job {
+    padding: 22px 24px;
+    background: var(--blush);
+    border-radius: 10px;
+  }
+
+  .job + .job {
+    margin-top: 18px;
+  }
+
+  .job-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.08rem;
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  .job p {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    max-width: 60ch;
+  }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--pink-line);
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+
+    <header>
+      <div>
+        <h1>Khanittha Khonlor</h1>
+        <div class="role-line">Economics &amp; Data Analytics Student</div>
+      </div>
+      <div class="contact">
+        Bangkok, Thailand
+      </div>
+    </header>
+
+    <div class="layout">
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+
+        <section>
+          <h2>Education</h2>
+          <div class="edu-school">University of the Thai Chamber of Commerce</div>
+          <div class="edu-field">Economics &amp; Data Analytics</div>
+        </section>
+
+        <section>
+          <h2>Skills</h2>
+          <ul class="interest-list">
+            <li>Microsoft Excel</li>
+            <li>Python (basics)</li>
+            <li>Data analysis</li>
+            <li>Business communication</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Interests</h2>
+          <ul class="interest-list">
+            <li>Studying how businesses are run and grown</li>
+            <li>Watching content-creation videos for product promotion ideas</li>
+          </ul>
+        </section>
+
+      </aside>
+
+      <!-- MAIN -->
+      <main class="main">
+
+        <section>
+          <h2>Profile</h2>
+          <p class="profile-statement">
+            Economics and Data Analytics student with a strong interest in data analysis and business.
+            Comfortable working with Excel and Python, a fast and dedicated learner, reliable in following
+            through on responsibilities, and eager to keep building skills that apply directly to real work.
+          </p>
+        </section>
+
+        <section>
+          <h2>Work Experience</h2>
+
+          <div class="job">
+            <div class="job-title">Online Eyewear Shop — Instagram</div>
+            <p>
+              Managed the shop's day-to-day operations, from setting product prices and calculating costs
+              to running back-end systems. Handled customer communication and product information, and
+              oversaw overall sales and store operations.
+            </p>
+          </div>
+
+          <div class="job">
+            <div class="job-title">Manufacturer Coordination — China</div>
+            <p>
+              Liaised with production factories in China on product details and manufacturing specifications.
+              Negotiated pricing, tracked orders and shipments, and coordinated with the factory to resolve
+              issues that came up during production.
+            </p>
+          </div>
+        </section>
+
+      </main>
+
+    </div>
+
+    <footer>
+      Khanittha Khonlor · Bangkok, Thailand
+    </footer>
+
+  </div>
+</body>
+</html>
